@@ -15,7 +15,7 @@ public class RacingGame {
 
     public RacingGame() {
         inputView = new InputView();
-        gameInputException = GameInputException.getInstance();
+        gameInputException = new GameInputException();
         gameController = new GameController();
     }
 
