@@ -4,17 +4,12 @@ import message.GameMessage;
 
 public class GameView {
 
-    private static GameView defaultGameView;
+    //private static GameView defaultGameView;
 
-    private GameView() {
+    public GameView() {
     }
 
-    public static GameView getInstance() {
-        if(defaultGameView == null) {
-            defaultGameView = new GameView();
-        }
-        return defaultGameView;
-    }
+
 
     public void printResult() {
         System.out.println(GameMessage.newLine.getMessage() + GameMessage.result.getMessage());
@@ -29,7 +24,7 @@ public class GameView {
     }
 
     public void close() {
-        defaultGameView = null;
+        //defaultGameView = null;
     }
 
 }
