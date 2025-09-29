@@ -4,7 +4,7 @@ import message.GameMessage;
 
 public class GameInputException {
 
-    //private static GameInputException defaultGameInputException;
+
 
     public GameInputException() {
     }
@@ -32,7 +32,7 @@ public class GameInputException {
     }
 
     public void close() {
-        //defaultGameInputException = null;
+
     }
 
 }
