@@ -9,9 +9,14 @@ import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
-        RacingGame game = RacingGame.getInstance();
-        game.run();
-        game.close();
+        // TODO: 프로그램 구현;
+        RacingGame game =new RacingGame();
+
+        try {
+            game.run();
+        }
+        finally {
+            game.close();
+        }
     }
 }
