@@ -4,17 +4,12 @@ import message.GameMessage;
 
 public class GameInputException {
 
-    private static GameInputException defaultGameInputException;
+    //private static GameInputException defaultGameInputException;
 
-    private GameInputException() {
+    public GameInputException() {
     }
 
-    public static GameInputException getInstance() {
-        if(defaultGameInputException == null) {
-            defaultGameInputException = new GameInputException();
-        }
-        return defaultGameInputException;
-    }
+
 
     public void validateNameLength(String[] names) {
         for(String name : names) {
@@ -37,7 +32,7 @@ public class GameInputException {
     }
 
     public void close() {
-        defaultGameInputException = null;
+        //defaultGameInputException = null;
     }
 
 }
