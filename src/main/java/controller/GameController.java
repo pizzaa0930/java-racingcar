@@ -6,22 +6,22 @@ import view.GameView;
 
 public class GameController {
 
-    private static GameController gameController;
+    //private static GameController gameController;
 
     private final GameView gameView;
     private final CarService carService;
 
-    private GameController() {
+    public GameController() {
         gameView = GameView.getInstance();
         carService = CarService.getInstance();
     }
 
-    public static GameController getInstance() {
+    /*public static GameController getInstance() {
         if(gameController == null) {
             gameController = new GameController();
         }
         return gameController;
-    }
+    }*/
 
     public void raceSet(String[] names) {
         gameView.printResult();
@@ -41,7 +41,7 @@ public class GameController {
     public void close() {
         carService.close();
         gameView.close();
-        gameController = null;
+        //gameController = null;
     }
 
 }
