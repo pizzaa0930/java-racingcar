@@ -18,7 +18,7 @@ public class CarTest {
         String[] carNames = {"a","b","c","d"};
         int[] distanceArr = {2,4,1,0};
 
-        CarService carService = CarService.getInstance();
+        CarService carService = new CarService();
         carService.fill(carNames,distanceArr);
         String winner = carService.getWinners();
 
@@ -28,7 +28,7 @@ public class CarTest {
 
     @Test
     void 숫자_정규식_확인() {
-        GameInputException gameException = GameInputException.getInstance();
+        GameInputException gameException = new GameInputException();
         String input = "123456789!";
         assertThatThrownBy(() -> gameException.validateNumber(input))
                 .isInstanceOf(IllegalArgumentException.class)
@@ -37,7 +37,7 @@ public class CarTest {
 
     @Test
     void 이름_길이_확인() {
-        GameInputException gameException = GameInputException.getInstance();
+        GameInputException gameException = new GameInputException();
         String[] names = {"a","a23","abc123"};
         assertThatThrownBy(() -> gameException.validateNameLength(names))
                 .isInstanceOf(IllegalArgumentException.class)
@@ -46,7 +46,7 @@ public class CarTest {
 
     @Test
     void 회수_첫숫자_0_체크() {
-        GameInputException gameException = GameInputException.getInstance();
+        GameInputException gameException = new GameInputException();
         String input = "01";
         assertThatThrownBy(() -> gameException.validateNumberZero(input))
                 .isInstanceOf(IllegalArgumentException.class)
