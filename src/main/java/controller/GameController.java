@@ -6,7 +6,7 @@ import view.GameView;
 
 public class GameController {
 
-    //private static GameController gameController;
+
 
     private final GameView gameView;
     private final CarService carService;
@@ -41,7 +41,7 @@ public class GameController {
     public void close() {
         carService.close();
         gameView.close();
-        //gameController = null;
+
     }
 
 }
