@@ -24,7 +24,7 @@ public class GameView {
     }
 
     public void close() {
-        //defaultGameView = null;
+
     }
 
 }

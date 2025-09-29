@@ -13,7 +13,7 @@ public class CarService {
 
     private final ArrayList<Car> carList;
     private final StringBuilder sb;
-    //private static CarService defaultCarService;
+
 
     public CarService() {
         carList = new ArrayList<>();
@@ -23,7 +23,7 @@ public class CarService {
 
 
     public void close() {
-        //defaultCarService = null;
+
     }
 
     public void fill(String[] carNameArr,int[] distance) {
