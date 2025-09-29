@@ -12,8 +12,8 @@ public class GameController {
     private final CarService carService;
 
     public GameController() {
-        gameView = GameView.getInstance();
-        carService = CarService.getInstance();
+        gameView = new GameView();
+        carService = new CarService();
     }
 
     /*public static GameController getInstance() {
