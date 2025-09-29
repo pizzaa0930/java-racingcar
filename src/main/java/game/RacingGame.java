@@ -8,23 +8,23 @@ import view.InputView;
 
 public class RacingGame {
 
-    private static RacingGame defaultRacingGame;
+   // private static RacingGame defaultRacingGame;
     private final InputView inputView;
     private final GameInputException gameInputException;
     private final GameController gameController;
 
-    private RacingGame() {
-        inputView = InputView.getInstance();
+    public RacingGame() {
+        inputView = new InputView();
         gameInputException = GameInputException.getInstance();
-        gameController = GameController.getInstance();
+        gameController = new GameController();
     }
 
-    public static RacingGame getInstance() {
+    /*public static RacingGame getInstance() {
         if(defaultRacingGame == null) {
             defaultRacingGame = new RacingGame();
         }
         return defaultRacingGame;
-    }
+    }*/
 
     public void run() {
         String[] names = preHandleNames();
@@ -52,7 +52,7 @@ public class RacingGame {
         gameController.close();
         gameInputException.close();
         inputView.close();
-        defaultRacingGame = null;
+        //defaultRacingGame = null;
     }
 
 }
