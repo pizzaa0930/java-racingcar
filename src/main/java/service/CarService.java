@@ -13,22 +13,17 @@ public class CarService {
 
     private final ArrayList<Car> carList;
     private final StringBuilder sb;
-    private static CarService defaultCarService;
+    //private static CarService defaultCarService;
 
-    private CarService() {
+    public CarService() {
         carList = new ArrayList<>();
         sb = new StringBuilder();
     }
 
-    public static CarService getInstance() {
-        if(defaultCarService == null) {
-            defaultCarService = new CarService();
-        }
-        return defaultCarService;
-    }
+
 
     public void close() {
-        defaultCarService = null;
+        //defaultCarService = null;
     }
 
     public void fill(String[] carNameArr,int[] distance) {
