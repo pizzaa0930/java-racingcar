@@ -6,7 +6,7 @@ import view.GameView;
 
 public class GameController {
 
-    //private static GameController gameController;
+
 
     private final GameView gameView;
     private final CarService carService;
